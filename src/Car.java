@@ -1,25 +1,41 @@
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class Car {
-int x,y,vx,vy;
+public class Car extends Vehicle implements KeyListener{
+
 public Car(int x,int y, int vx,int vy) {
-	this.x=x;
-	this.y=y;
-	this.vx=vx;
-	this.vy=vy;
+	super(x,y,vx,vy);
 }
 public void draw(MyFrame frame) {
-	frame.fillRect(x+18.75, y, 37.5, 25);
-	frame.fillRect(x, y+25, 75, 25);
-	frame.fillOval(x+6.25, y+50, 25, 25);
-	frame.fillOval(x+43.75, y+50, 25, 25);
+	frame.fillRect(x+20, y, 40, 20);
+	frame.fillRect(x, y+20, 80, 20);
+	frame.fillOval(x+10, y+40, 20, 20);
+	frame.fillOval(x+50, y+40, 20, 20);
 }
-public void move() {
-	x+=vx;
-	y+=vy;
-	//位置を判断させ、場所変える
-	if(x>400) 
-	{
-		x=0;
+@Override
+public void keyTyped(KeyEvent e) {
+	// TODO 自動生成されたメソッド・スタブ
+	
+}
+@Override
+public void keyPressed(KeyEvent e) {
+	if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+		vx=-5;
 	}
+	if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+		vx=5;
+	}
+	if(e.getKeyCode()==KeyEvent.VK_UP) {
+		vy=-5;
+	}
+	if(e.getKeyCode()==KeyEvent.VK_DOWN) {
+		vy=5;
+	}
+}
+@Override
+public void keyReleased(KeyEvent e) {
+	vx=0;
+	vy=0;
+	
 }
 }
