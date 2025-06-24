@@ -36,7 +36,5 @@ public void keyPressed(KeyEvent e) {
 public void keyReleased(KeyEvent e) {
 	vx=0;
 	vy=0;
-	
-	
 }
 }
