@@ -2,7 +2,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Car extends Vehicle implements KeyListener{
-
+	//練習問題6ではKeyListenerの使用はしない
 public Car(int x,int y, int vx,int vy) {
 	super(x,y,vx,vy);
 }
