@@ -16,7 +16,7 @@ public void run()
 			vehicles.get(j).draw(this);
 			vehicles.get(j).move(this);
 		}
-		sleep(0.001);
+		sleep(0.01);
 	}
 	}
 }

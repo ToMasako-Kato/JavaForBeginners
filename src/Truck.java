@@ -9,4 +9,5 @@ public class Truck extends Vehicle {
 		frame.fillOval(x+15, y+30, 10, 10);
 		frame.fillOval(x+65, y+30, 10, 10);
 	}
+	
  }

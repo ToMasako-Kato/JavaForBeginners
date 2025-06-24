@@ -15,7 +15,7 @@ public void move(MyFrame f) {
 	y+=vy;
 	int width = f.getWidth();
 	int height = f.getHeight();
-	
+	//ウィンドウのサイズ取得
 	if(x<-80)
 	{
 		x += width+160;

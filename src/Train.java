@@ -13,4 +13,5 @@ public class Train extends Vehicle{
 		frame.fillOval(x+85, y+30, 10, 10);
 	}
 	
+	
 }
